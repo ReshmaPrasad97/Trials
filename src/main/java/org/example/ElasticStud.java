@@ -40,5 +40,4 @@ public class ElasticStud {
 
         System.out.println(EntityUtils.toString(response.getEntity()));
     }
-
 }

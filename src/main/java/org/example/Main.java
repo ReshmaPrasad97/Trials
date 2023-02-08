@@ -17,7 +17,6 @@ public class Main {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentmanagement", "root", "password");
         return connection;
     }
-
     public void createPreparedStatement(Connection connection) throws SQLException {
         PreparedStatement ps = connection.prepareStatement("INSERT INTO student (id,name,address) VALUES (?, ?, ?)");
         ps.setInt(1, 78);
