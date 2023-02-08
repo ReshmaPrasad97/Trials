@@ -22,7 +22,6 @@ public class ElasticStud {
         object.addData();
         object.getData();
     }
-
     public Connection EsConnection() throws SQLException, ClassNotFoundException {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentmanagement", "root", "password");
         return connection;
@@ -33,7 +32,6 @@ public class ElasticStud {
         Request request = new Request("POST", "/student/_doc/1");
         request.setJsonEntity(json);
         Response response = restClient.performRequest(request);
-
         System.out.println(EntityUtils.toString(response.getEntity()));
     }
     public void getData() throws IOException {
