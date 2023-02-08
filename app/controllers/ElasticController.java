@@ -1,17 +1,16 @@
 package controllers;
 
+import com.google.inject.Inject;
 import config.Global;
+import org.elasticsearch.client.RestClient;
 import play.mvc.Result;
-
-import javax.inject.Inject;
 
 import static play.mvc.Results.ok;
 
 public class ElasticController {
     @Inject
-    Global global;
+    private RestClient restClient;
     public Result connection(){
-        global.configure();
 
         return ok("success");
     }
